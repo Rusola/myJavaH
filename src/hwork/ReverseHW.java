@@ -15,7 +15,7 @@ public class ReverseHW {
         boolean is_anagram = obj.isAnagram( "debit card", "bad credit");
         System.out.println(is_anagram);
 
-        int factorial = obj.getFactorial(5);
+        int factorial = obj.getFactorial(8);
         System.out.println(factorial);
 
 
@@ -39,6 +39,10 @@ public class ReverseHW {
     }
 
     public int getFactorial(int number){
-        return number *(number - 1);
+        int fact = 1;
+        for(int i = 1; i <=number; i ++){
+            fact = fact * i;
+        }
+        return fact;
     }
 }
