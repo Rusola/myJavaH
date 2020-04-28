@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayManipulation {
     public static void main(String[] args) {
         // Array is an object in Java
@@ -21,6 +23,13 @@ public class ArrayManipulation {
 
         // simple initialization for Strings & primitives
         String[] family = {"Alice", "Peter"};
+
+        String[] books = {" War and Peace", "Farewell to Arms"};
+        String[] books2 = {" War and Peace", "Farewell to Arms"};
+
+        if(Arrays.equals(books, books2)){
+            System.out.println("Arrays are equal");
+        }
 
     }
 }
