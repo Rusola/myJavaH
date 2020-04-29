@@ -9,6 +9,6 @@ public class Person {
     }
 
     public void getName(){
-        System.out.printf("My name is :%s", name);
+        System.out.printf("My name is %s.", name);
     }
 }

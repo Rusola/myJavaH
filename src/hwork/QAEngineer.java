@@ -9,7 +9,9 @@ public class QAEngineer  extends Employee{
         bonus = aBonus;
     }
 
-//    public double getBonus() {
-//
-//    }
+    public double getBonus() {
+
+        return bonus * 1.25;
+
+    }
 }

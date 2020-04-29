@@ -7,7 +7,15 @@ public class Employee extends Person{
     // constructor
     public Employee(String aName, double aSalary, String aCompany){
         super(aName);
-        salary = aSalary;
+        salary  = aSalary;
         company = aCompany;
+    }
+
+    public double getSalary(){
+        return salary;
+    }
+
+    public String getCompany(){
+        return company;
     }
 }
