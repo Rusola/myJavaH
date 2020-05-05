@@ -1,4 +1,4 @@
-package hwork;
+package com.hwork;
 
 public class QAEngineer  extends Employee{
     private double bonus;

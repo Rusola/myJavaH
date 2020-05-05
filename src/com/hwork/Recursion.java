@@ -1,12 +1,16 @@
-package hwork;
+package com.hwork;
 
 public class Recursion {
     public static void main(String[] args) {
         Recursion obj = new Recursion();
         int factorial = obj.getFactorial2(8);
+
+        // get one final result of multiplying all numbers
         System.out.println(factorial);
 
         int sum = obj.getSum(3);
+
+        // get one final result of all numbers sum
         System.out.println(sum);
 
     }

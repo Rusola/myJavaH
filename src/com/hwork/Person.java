@@ -1,4 +1,4 @@
-package hwork;
+package com.hwork;
 
 public class Person {
     private String name;
