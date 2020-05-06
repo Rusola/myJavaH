@@ -1,4 +1,4 @@
-package inheritance;
+package interfaces;
 
 public interface Drawable {
     void draw();

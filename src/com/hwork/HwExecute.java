@@ -23,5 +23,7 @@ public class HwExecute {
         int[] numbers = {-1, -1, 100, -1, 5, 6, 2, 1, 3};
         int result = mySort.getSmallest(numbers);
         System.out.print(result);
+        System.out.println("**********");
+        System.out.println(mySort.getSimpleSecond(numbers));
     }
 }

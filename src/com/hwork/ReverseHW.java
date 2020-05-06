@@ -23,8 +23,21 @@ public class ReverseHW {
         ReverseHW obj = new ReverseHW();
         boolean is_anagram = obj.isAnagram( "debit card", "bad credit");
         System.out.println("Anagram: " + is_anagram);
+        System.out.println(obj.myReverse2("Abcd"));
     }
 
+    public String myReverse(String str){
+        String newStr = "";
+        for(int i = str.length() - 1; i >= 0; i --){
+            newStr +=str.charAt(i);
+        }
+        return newStr;
+    }
+
+    public String myReverse2(String str){
+        return new StringBuilder(str).reverse().toString();
+    }
+    // the same if rearranging the letters
     public boolean isAnagram( String str1, String str2){
         if(str1.length() != str2.length()){
             return false;

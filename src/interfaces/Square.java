@@ -1,4 +1,6 @@
-package inheritance;
+package interfaces;
+
+import interfaces.Drawable;
 
 public class Square implements Drawable {
     public void draw(){
