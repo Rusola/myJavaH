@@ -1,7 +1,12 @@
 package com.him;
 
-import com.me.MyClass;
+//import com.me.MyClass;
+//import com.me.*;
+import com.me.MySecondClass;
 
 public class HisClass {
-    com.me.MyClass mc = new MyClass();
+
+    // create a variable
+    private com.me.MyClass m_class;
+    private MySecondClass m_second;
 }
