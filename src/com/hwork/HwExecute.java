@@ -25,5 +25,11 @@ public class HwExecute {
         System.out.print(result);
         System.out.println("**********");
         System.out.println(mySort.getSimpleSecond(numbers));
+
+        // check if duplicates
+        MyArray m_array = new MyArray();
+        String[] arr = {"t", "b", "a", "n", "v", "t"};
+       boolean is_duplicate = m_array.isDuplicate(arr);
+        System.out.println("Method isDuplicate found duplicates: " + is_duplicate);
     }
 }
