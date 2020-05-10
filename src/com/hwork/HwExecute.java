@@ -31,5 +31,13 @@ public class HwExecute {
         String[] arr = {"t", "b", "a", "n", "v", "t"};
        boolean is_duplicate = m_array.isDuplicate(arr);
         System.out.println("Method isDuplicate found duplicates: " + is_duplicate);
+
+        System.out.println("***** printDuplicates *****");
+        int[] arr_numbers = {3, 7, 9, 3, 8, 9, 3};
+        m_array.printDuplicates(arr_numbers);
+
+        System.out.println("***** printFrequency *****");
+        String[] str_arr = {"One", "Two", "Three", "Two", "Eleven", "Three", "Three", "Eight"};
+        m_array.printFrequency(str_arr);
     }
 }
