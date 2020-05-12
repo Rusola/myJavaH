@@ -39,5 +39,16 @@ public class HwExecute {
         System.out.println("***** printFrequency *****");
         String[] str_arr = {"One", "Two", "Three", "Two", "Eleven", "Three", "Three", "Eight"};
         m_array.printFrequency(str_arr);
+
+        System.out.println("***** array_backward *****");
+        int[] array_backward = {1, 2, 3, 4, 5};
+        for(int i = array_backward.length; i-- > 0;){
+            System.out.print(i); // 43210
+        }
+
+        System.out.println("***** 0-9 Loop non stop *****");
+        for( int i = 0; ; i ++, i = i%10){
+            System.out.println(i);
+        }
     }
 }

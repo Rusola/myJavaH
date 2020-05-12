@@ -3,6 +3,7 @@ package com.hwork;
 import java.util.Arrays;
 
 class MyArray {
+    int y;
    protected boolean isDuplicate(String[] arr){
        Arrays.sort(arr);
        for( int i = 0; i < arr.length - 1; i ++){
@@ -40,6 +41,12 @@ class MyArray {
                 System.out.println(arr[i + 1] + " : " + count);
             }
         }
+    }
+
+    protected void nonstopUntil(int n){
+       for( int i = 0; ; i ++, i = i%n){
+           System.out.println(i);
+       }
     }
 }
 
