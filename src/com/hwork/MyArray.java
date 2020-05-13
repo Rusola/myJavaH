@@ -1,9 +1,11 @@
 package com.hwork;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 class MyArray {
-    int y;
+
    protected boolean isDuplicate(String[] arr){
        Arrays.sort(arr);
        for( int i = 0; i < arr.length - 1; i ++){
@@ -14,6 +16,23 @@ class MyArray {
        return false;
    }
 
+   // or
+   protected boolean isDuplicateWithSet(String[] arr) {
+       var set = new HashSet<String>();
+       // поместить все элементы по одному в set
+       for (String word: arr) {
+           set.add(word);
+       }
+
+       if(set.size() == words.length){
+
+           // there is no duplicates
+           return false;
+       }
+       // there are duplicates
+       return true;
+   }
+
    protected void printDuplicates(int[] arr){
        Arrays.sort(arr);
        for( int i = 0; i < arr.length - 1; i ++){
@@ -22,6 +41,12 @@ class MyArray {
            }
        }
    }
+
+   // or
+   protected void printDuplicates2(int[] arr) {
+
+   }
+
 
    // распечатать частоту элементов в массиве ["One", "Two", "Three", "Two", "Eleven", "Three", "Three", "Eight"]
     protected  void printFrequency(String[] arr){
