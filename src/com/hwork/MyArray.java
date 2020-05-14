@@ -24,7 +24,7 @@ class MyArray {
            set.add(word);
        }
 
-       if(set.size() == words.length){
+       if(set.size() == arr.length){
 
            // there is no duplicates
            return false;
