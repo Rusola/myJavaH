@@ -5,14 +5,15 @@ import java.util.Arrays;
 public class HwExecute {
     public static void main(String[] args) {
         Prime prime_obj = new Prime();
+        System.out.println("**********isPrime() простое ли numbers ***********");
         for(int i = 1; i <=100; i++){
             if(prime_obj.isPrime(i)){
                 System.out.print(i);
             };
         }
-        System.out.println();
+        System.out.println("*********getFibonacci ***************");
         prime_obj.getFibonacci(155);
-        System.out.println("getFibonacci2:");
+        System.out.println("*********getFibonacci2 ***************");
         System.out.println(prime_obj.getFibonacci2(6));
 
         Palindrome myPalindrome = new Palindrome();
@@ -38,7 +39,7 @@ public class HwExecute {
 
         System.out.println("***** printFrequency *****");
         String[] str_arr = {"One", "Two", "Three", "Two", "Eleven", "Three", "Three", "Eight"};
-        m_array.printFrequency(str_arr);
+        m_array.printFrequency2(str_arr);
 
         System.out.println("***** array_backward *****");
         int[] array_backward = {1, 2, 3, 4, 5};
@@ -47,8 +48,8 @@ public class HwExecute {
         }
 
         System.out.println("***** 0-9 Loop non stop *****");
-        for( int i = 0; ; i ++, i = i%10){
-            System.out.println(i);
-        }
+//        for( int i = 0; ; i ++, i = i%10){
+//            System.out.println(i);
+//        }
     }
 }

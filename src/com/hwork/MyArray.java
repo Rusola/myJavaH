@@ -68,6 +68,21 @@ class MyArray {
         }
     }
 
+    // or
+    protected  void printFrequency2(String[] arr){
+       var map = new HashMap<String, Integer>();
+       for( String word: arr) {
+           if(map.containsKey(word)) {
+               // map will not insert key duplicate, but update it
+               map.put(word, map.get(word) + 1);
+           }else{
+               // сначала сюда зайдет
+               map.put(word, 1);
+           }
+       }
+       map.forEach((key, value) -> System.out.println(key + " : " + value));
+    }
+
     protected void nonstopUntil(int n){
        for( int i = 0; ; i ++, i = i%n){
            System.out.println(i);

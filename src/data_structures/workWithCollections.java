@@ -31,7 +31,7 @@ public class workWithCollections {
         animals.put("dog", 1);
         animals.put("rabbit", 67);
         System.out.println("Animals map" + animals);
-        System.out.println(animals.containsKey("nosuchanimal"));
+        System.out.println(animals.containsKey("noSuchAnimal"));
         System.out.println(animals.containsValue(67));
 //        for(String animal : animals ){ так нельзя
 //            ...;
