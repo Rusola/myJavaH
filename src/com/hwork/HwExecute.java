@@ -1,6 +1,12 @@
 package com.hwork;
 
+import collections.Intern;
+//import collections.Server;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Random;
 
 public class HwExecute {
     public static void main(String[] args) {
@@ -51,5 +57,83 @@ public class HwExecute {
 //        for( int i = 0; ; i ++, i = i%10){
 //            System.out.println(i);
 //        }
+
+        HwExecute obj = new HwExecute();
+
+        HashMap serverA = new HashMap<String, String>();
+        serverA.put("name", "A");
+        serverA.put("powers", "3");
+
+        HashMap serverB = new HashMap<String, String>();
+        serverB.put("name", "B");
+        serverB.put("powers", "1");
+
+        HashMap serverC = new HashMap<String, String>();
+        serverC.put("name", "C");
+        serverC.put("powers", "2");
+
+        var servers = new ArrayList<HashMap<String, String>>();
+
+        servers.add(serverA);
+        servers.add(serverB);
+        servers.add(serverC);
+        obj.printVero(servers);
+    }
+
+    void printVero(ArrayList<HashMap<String, String>> servers){
+
+        // all powers
+        int powers = 0;
+        for (int i=0; i< servers.size(); i++){
+            HashMap<String, String> map = servers.get(i);
+
+            // extract power
+            int p = Integer.parseInt(map.get("powers"));
+            powers += p;
+        }
+
+        int full_range = 100;
+        double min = 0;
+        double max = 0;
+        for (int i=0; i< servers.size(); i++){
+            HashMap<String, String> map = servers.get(i);
+            // extract power again
+            Double p = Double.parseDouble(map.get("powers"));
+            double percent = p/powers * 100;
+//            map.put("доля", Double.toString(percent));
+            map.put("percent", Double.toString(percent));
+
+            // assign a unique range to each server
+            String str_min = Double.toString(min);
+            map.put("min", str_min);
+
+            max += Double.parseDouble(map.get("percent"));
+
+            String str_max = Double.toString(max);
+            map.put("max", str_max);
+
+            min = max + 1;
+        }
+
+        System.out.println(servers);
+        // create instance of Random class
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 99
+        double random = rand.nextInt(100) + 0.0;
+        servers.forEach(server  ->{
+            double map_min = Double.parseDouble(server.get("min"));
+            double map_max = Double.parseDouble(server.get("max"));
+            System.out.println("**************");
+            System.out.println(map_min);
+            System.out.println(map_max);
+            if(random >= map_min & random <= map_max){
+                System.out.println(server.get("name"));
+            }else{
+                System.out.println("not found");
+            }
+            System.out.println(random);
+        });
+
     }
 }
