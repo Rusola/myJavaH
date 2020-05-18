@@ -124,9 +124,6 @@ public class HwExecute {
         servers.forEach(server  ->{
             double map_min = Double.parseDouble(server.get("min"));
             double map_max = Double.parseDouble(server.get("max"));
-            System.out.println("**************");
-            System.out.println(map_min);
-            System.out.println(map_max);
             if(random >= map_min & random <= map_max){
                 System.out.println(server.get("name"));
             }else{
@@ -134,6 +131,5 @@ public class HwExecute {
             }
             System.out.println(random);
         });
-
     }
 }
