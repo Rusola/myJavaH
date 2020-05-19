@@ -1,10 +1,9 @@
 package com.hwork;
 
-import collections.Intern;
+import collections.MyIntern;
 //import collections.Server;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -77,10 +76,23 @@ public class HwExecute {
         servers.add(serverA);
         servers.add(serverB);
         servers.add(serverC);
-        obj.printVero(servers);
+        obj.getServer(servers);
+        /**************************************/
+
+        // or
+        MyIntern myInternA = new MyIntern("A", 1);
+        MyIntern myInternB = new MyIntern("B", 3);
+        MyIntern myInternC = new MyIntern("C", 2);
+
+        var servers2 = new ArrayList<MyIntern>();
+        servers2.add(myInternA);
+        servers2.add(myInternB);
+        servers2.add(myInternC);
+
+        obj.getServer2(servers2);
     }
 
-    void printVero(ArrayList<HashMap<String, String>> servers){
+    void getServer(ArrayList<HashMap<String, String>> servers){
 
         // all powers
         int powers = 0;
@@ -132,4 +144,55 @@ public class HwExecute {
             System.out.println(random);
         });
     }
+
+    // or
+    void getServer2(ArrayList<MyIntern> servers2){
+
+        // all powers
+        double powers = 0;
+        for(int i =0; i < servers2.size(); i ++) {
+            // wow!
+            double a = servers2.get(i).getPower();
+            powers = powers + a;
+        }
+
+        int full_range = 100;
+        double min = 0;
+        double max = 0;
+        for (int i=0; i< servers2.size(); i++){
+
+            // extract power again
+            MyIntern myIntern = servers2.get(i);
+            Double p = myIntern.getPower();
+            double percent = p/powers * 100;
+
+            // add percent to obj
+            myIntern.setPercent(percent);
+
+            // assign a unique range: min & max to each server
+            myIntern.setMin(min);
+            max += myIntern.getPercent();
+            myIntern.setMax(max);
+            min = max + 1;
+        }
+
+        System.out.println(servers2);
+        // create instance of Random class
+        Random rand = new Random();
+
+        // Generate random integers in range 0 to 99
+        double random = rand.nextInt(100) + 0.0;
+        for (int i=0; i< servers2.size(); i++){
+            MyIntern server = servers2.get(i);
+            double server_min = server.getMin();
+            double server_max = server.getMax();;
+            if(random >= server_min & random <= server_max){
+                System.out.println(server.getName());
+            }else{
+                System.out.println("not found");
+            }
+            System.out.println(random);
+        }
+    }
+
 }
