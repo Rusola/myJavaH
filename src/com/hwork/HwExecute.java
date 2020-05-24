@@ -1,5 +1,6 @@
 package com.hwork;
 
+import collections.LoadBalancer;
 import collections.MyIntern;
 //import collections.Server;
 
@@ -77,7 +78,7 @@ public class HwExecute {
         servers.add(serverB);
         servers.add(serverC);
         obj.getServer(servers);
-        /**************************************/
+        /************** getServer2 ************************/
 
         // or
         MyIntern myInternA = new MyIntern("A", 1);
@@ -90,6 +91,21 @@ public class HwExecute {
         servers2.add(myInternC);
 
         obj.getServer2(servers2);
+
+        /************** getServer3 ************************/
+        var servers3 = new HashMap<Character, Integer>();
+        servers3.put('A', 3);
+        servers3.put('B', 1);
+        servers3.put('C', 2);
+        System.out.println(servers3);
+        System.out.println("***");
+        var balancer = new LoadBalancer(servers3);
+        balancer.convertValueToRange();
+        System.out.println(servers3);
+        System.out.println("**getServer()**");
+        for(int i = 1; i<=6; i ++){
+            System.out.println(balancer.getServer());
+        }
     }
 
     void getServer(ArrayList<HashMap<String, String>> servers){
@@ -131,8 +147,8 @@ public class HwExecute {
         // create instance of Random class
         Random rand = new Random();
 
-        // Generate random integers in range 0 to 99
-        double random = rand.nextInt(100) + 0.0;
+        // Generate random integers in range 1 to 100
+        double random = rand.nextInt(100) + 1.0;
         servers.forEach(server  ->{
             double map_min = Double.parseDouble(server.get("min"));
             double map_max = Double.parseDouble(server.get("max"));
@@ -180,8 +196,8 @@ public class HwExecute {
         // create instance of Random class
         Random rand = new Random();
 
-        // Generate random integers in range 0 to 99
-        double random = rand.nextInt(100) + 0.0;
+        // Generate random integers in range 1 to 100
+        double random = rand.nextInt(100) + 1.0;
         for (int i=0; i< servers2.size(); i++){
             MyIntern server = servers2.get(i);
             double server_min = server.getMin();
@@ -194,5 +210,4 @@ public class HwExecute {
             System.out.println(random);
         }
     }
-
 }
