@@ -2,7 +2,7 @@ package files;
 
 import java.io.*;
 import java.util.Properties; // class that can read files with key value pairs
-import java.util.Scanner;
+import java.util.Scanner; // читает без key value pairs
 
 public class Files {
     public static void main(String[] args) {

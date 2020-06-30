@@ -1,8 +1,10 @@
+package exeptions;
+
 import java.io.FileNotFoundException;
 
 public class TestExceptions {
     public static void main(String[] args) {
-        int i = 3;
+        int i = 1;
         int j = 0;
         try{
             switch(i){
@@ -21,7 +23,9 @@ public class TestExceptions {
 //            more then one, so do it in the right order
 //        }
         catch(Exception e){ // Exception e = new ArithmeticException();
+            System.out.println("********");
             System.out.println(e); // e is an object, but print can work only with String, so behind the scene it is smart to find Object.toString() for e
+            System.out.println("********");
         }
     }
 }

@@ -18,10 +18,12 @@ public class MemberLevel {
     }
 
     protected int getProtectedAge() { // should be protected as works with protected?
+
         return age;
     }
 
     String getDefaultCity() {
-         return defaultCity;
+
+        return defaultCity;
     }
 }
