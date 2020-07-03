@@ -26,10 +26,11 @@ public class DateUtils {
         }
     }
 
-    public static final Month[] MONTHS = {
-            new Month("January", 31, 18),
-            new Month("February", 28, 15)}
-}
+//    public static final Month[] MONTHS = {
+//            new Month("January", 31, 18),
+//            new Month("February", 28, 15)
+//    }
+//}
 
     public static String[] getAllMonths(){
         return new String[] {"January", "February"};
