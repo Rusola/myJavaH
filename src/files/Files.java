@@ -24,9 +24,9 @@ public class Files {
 
         var abstract_pathname = new File("src/files/notKeyValueFile.txt"); // Creates a new File instance by converting the given pathname string into an abstract(system-independent) pathname
         try {
-            Scanner my_file = new Scanner(abstract_pathname);// parse, breaks into tokens using a delimiter pattern (default: whitespace)
-            while(my_file.hasNextLine()){  // двигаемся по сторкм файла пока строки существуют. Мы не знаем скольео будет строк => while
-                System.out.println(my_file.nextLine());
+            Scanner scanned_file = new Scanner(abstract_pathname);// parse, breaks into tokens using a delimiter pattern (default: whitespace)
+            while(scanned_file.hasNextLine()){  // двигаемся по сторкм файла пока строки существуют. Мы не знаем скольео будет строк => while
+                System.out.println(scanned_file.nextLine());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
