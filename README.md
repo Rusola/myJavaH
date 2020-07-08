@@ -1,5 +1,6 @@
 # myJavaH
 repo for Java tasks
+
 classpath в проекте с ddt:
 Нажимаешь на папку test правой кнопкой => New => Directory
 Называешь ее resources, клик на ней правой кнопкой => Mark directory as => Test Resources Root
