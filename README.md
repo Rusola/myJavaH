@@ -1,5 +1,5 @@
 # myJavaH
-repo for Java tasks
+repo for Java tasks 
 
 classpath в проекте с ddt:
 Нажимаешь на папку test правой кнопкой => New => Directory
